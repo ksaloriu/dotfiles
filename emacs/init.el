@@ -19,6 +19,14 @@
 ;; This also sets the load path.
 (package-initialize)
 
+;; Add a directory to our load path so that when you `load` things
+;; below, Emacs knows where to look for the corresponding file.
+(add-to-list 'load-path "~/.emacs.d/custom")
+
+;; Sets up exec-path-from-shell (Mac only) so that Emacs will use the
+;; correct environment variables
+(load "mac.el")
+
 ;; No backups:
 (setq make-backup-files nil)
 
