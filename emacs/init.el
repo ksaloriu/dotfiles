@@ -1,11 +1,25 @@
-;; No backups:
+;;;;
+;; Packages
+;;;;
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; Define package repositories
+(require 'package)
+(add-to-list 'package-archives
+             '("tromey" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
+
+;; Load and activate emacs packages. Do this first so that the
+;; packages are loaded before you start trying to modify them.
+;; This also sets the load path.
 (package-initialize)
 
+;; No backups:
 (setq make-backup-files nil)
 
 ;; Turn on syntax highlighting for all major modes:
