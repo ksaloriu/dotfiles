@@ -128,9 +128,6 @@
 
 ;; (provide 'my-generic-conf)
 
-;; Use separately installed org-mode
-;; (require 'org-install)
-
 ;; Taken from: http://orgmode.org/manual/Activation.html#Activation
 ;; The following lines are always needed.  Choose your own keys.
 (add-to-list 'auto-mode-alist '("\\.  org\\'" . org-mode))
@@ -142,57 +139,11 @@
 ;; Hooks for org
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
-;; (add-hook 'org-mode-hook
-;;	  '(lambda ()
-;;	     (define-key org-mode-map (kbd "<f5>") 'reftex-citation)
-;;	     (define-key org-mode-map (kbd "<f6>") 'reftex-view-crossref)))
-
 ;; All files in ~/org are agenda-files:
 ;; (setq org-agenda-files (file-expand-wildcards "~/org/*.org"))
 
-;; Extra TODO states:
-;; (setq org-todo-keywords
-;;      '((sequence "TODO" "MAYBE" "|" "DONE" "FAIL")))
-
-;; Extra agenda views:
-; Removed Mon Aug  1 16:08:59 EEST 2011
-;; (setq org-agenda-custom-commands
-;;       '(("w" todo "WAITING" nil)
-;; 	("n" todo "TODO"
-;; 	 ((org-show-hierarchy-above nil))
-;; 	 ((org-show-following-heading)))
-;; 	("d" "Agenda + Next Actions" ((agenda) (todo "NEXT")))))
-
-; Removed Mon Aug  1 16:08:59 EEST 2011
- ;; (setq org-feed-alist
- ;;      '(("Twitter" "http://twitter.com/statuses/user_timeline/86107043.rss"
- ;; 	 "~/org/journal.org" "Twitter")))
-
-;; Get to org-files fast by M-x org
-;; (defun org ()
-;;   (interactive)
-;;   (find-file "~/org/dir.org"))
-
 ;; Return activates link:
 (setq org-return-follows-link t)
-
-;; Set up Remember:
-;; (require 'remember)
-;; (org-remember-insinuate)
-;; (setq org-directory "~/org/")
-;; (setq org-default-notes-file (concat org-directory "/notes.org"))
-;; (define-key global-map "\C-cr" 'org-remember)
-
-;; (setq org-remember-templates
-;;       '(("Journal" ?j "* %U %?\n\n  %i\n  %a" "~/org/journal.org" date-tree)
-;; 	("Todo" ?t "* TODO %?\n  %i\n  %a" "~/org/journal.org" "Todos" nil)
-;; 	("Web" ?w "* %?\n\n  Source: %u, %c\n\n  %i" "~/org/journal.org" "Web" nil)))
-
-; Babel
-;; (add-to-list 'load-path (expand-file-name "~/dev/org-mode/contrib/lisp/"))
-;; (require 'org-babel-init)
-;; (require 'org-babel-python)
-;; (org-babel-load-library-of-babel)
 
 (require 'ob-sh)
 
