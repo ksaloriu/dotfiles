@@ -104,6 +104,8 @@
 (setq ido-enable-flex-matching t)
 (ido-everywhere t)
 (ido-mode t)
+(ido-ubiquitous-mode t)
+(ido-everywhere t)
 
 ;; Enable wheelmouse support by default
 (cond (window-system
