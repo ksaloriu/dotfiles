@@ -147,7 +147,7 @@
 ;; Return activates link:
 (setq org-return-follows-link t)
 
-(require 'ob-sh)
+(require 'ob-shell)
 
 (setq org-confirm-babel-evaluate nil)
 
@@ -181,3 +181,26 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . "evince %s"))))
+ '(package-selected-packages
+   (quote
+    (paredit groovy-mode gradle-mode yaml-mode ledger-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((eval setq org-babel-R-command "c:/Progra~1/R/R-3.3.2/bin/R --slave --no-save")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
