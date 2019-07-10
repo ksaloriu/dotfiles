@@ -29,6 +29,8 @@
 
 (load "clojure.el")
 
+(load "go.el")
+
 ;; No backups:
 (setq make-backup-files nil)
 
