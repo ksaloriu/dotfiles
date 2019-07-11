@@ -34,6 +34,9 @@
 ;; No backups:
 (setq make-backup-files nil)
 
+;; No alarm bell
+(setq ring-bell-function 'ignore)
+
 ;; Turn on syntax highlighting for all major modes:
 (global-font-lock-mode t)
 
